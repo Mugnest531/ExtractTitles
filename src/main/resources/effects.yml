@@ -1,0 +1,33 @@
+# Глобальные шаблоны эффектов.
+# Использование в titles.yml:
+# effects:
+#   - template: speed_alchemist
+#   - template: miner_core
+#   - type: command
+#     on-activate:
+#       - "console:say {player} включил титул"
+
+templates:
+  speed_alchemist:
+    - type: potion
+      effect: SPEED
+      amplifier: 1
+      ambient: false
+      particles: true
+      icon: true
+
+  warrior_core:
+    - type: max_health
+      amount: 4.0
+
+  miner_core:
+    - type: mining_3x3
+      tools: [DIAMOND_PICKAXE, NETHERITE_PICKAXE, IRON_PICKAXE]
+      worlds: [world, world_nether]
+      disabled-blocks: [BEDROCK, END_PORTAL_FRAME]
+
+  guardian_permissions:
+    - type: permission
+      nodes:
+        - "example.fly"
+        - "example.kit.vip"

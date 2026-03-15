@@ -1,0 +1,5 @@
+# Основные настройки плагина
+purchase:
+  # Глобальный провайдер валюты для покупки титулов:
+  # PLAYERPOINTS | VAULT | NONE
+  currency-provider: "PLAYERPOINTS"

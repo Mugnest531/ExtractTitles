@@ -1,0 +1,20 @@
+# Настройки хранилища данных
+storage:
+  # Тип базы данных: SQLITE или MYSQL
+  type: "SQLITE"
+
+  sqlite:
+    # Имя файла SQLite в папке plugins/ExtractTitles
+    file: "extracttitles.db"
+
+  mysql:
+    # Хост MySQL
+    host: "127.0.0.1"
+    # Порт MySQL
+    port: 3306
+    # Имя базы данных
+    database: "extracttitles"
+    # Пользователь MySQL
+    username: "root"
+    # Пароль MySQL
+    password: "password"

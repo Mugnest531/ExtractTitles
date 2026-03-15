@@ -1,0 +1,36 @@
+name: ExtractTitles
+version: 1.0.0
+main: ru.lewhu.extracttitles.ExtractTitlesPlugin
+api-version: '1.21'
+authors: [mugnest]
+folia-supported: true
+softdepend: [Vault, PlaceholderAPI, PlayerPoints]
+
+commands:
+  extracttitles:
+    description: Main command for ExtractTitles
+    aliases: [etitles, et]
+    permission: extracttitles.use
+  titles:
+    description: Open titles GUI
+    permission: extracttitles.use
+
+permissions:
+  extracttitles.use:
+    default: true
+  extracttitles.admin.list:
+    default: op
+  extracttitles.admin.give:
+    default: op
+  extracttitles.admin.remove:
+    default: op
+  extracttitles.admin.granttemp:
+    default: op
+  extracttitles.admin.clearactive:
+    default: op
+  extracttitles.admin.edit:
+    default: op
+  extracttitles.admin.debug:
+    default: op
+  extracttitles.admin.buybypass:
+    default: op
