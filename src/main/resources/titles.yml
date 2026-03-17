@@ -1,0 +1,141 @@
+# Titles are configured only in this file.
+# For each title:
+# - permanent.enabled=true -> permanent purchase
+# - permanent.enabled=false + one key in temporary -> timed purchase
+#
+# You can use effect templates from effects.yml:
+# effects:
+#   - template: warrior_core
+#   - template: speed_alchemist
+
+titles:
+  warrior:
+    display-name: "<gradient:#ff9f43:#ee5253><bold>Warrior</bold></gradient>"
+    raw: "<#ff9f43>[Warrior]</#ff9f43>"
+    visible: "<#ff9f43>[Warrior]</#ff9f43>"
+    description: "Bonus to maximum health."
+    icon: NETHERITE_SWORD
+    menu-icons:
+      not-owned:
+        material: BARRIER
+        glow: false
+      owned-inactive:
+        material: NETHERITE_SWORD
+        glow: false
+      owned-active:
+        material: NETHERITE_SWORD
+        glow: true
+    enabled: true
+    purchase-options:
+      permanent:
+        enabled: true
+        cost: 450
+      temporary: {}
+    effects:
+      - template: warrior_core
+
+  alchemist:
+    display-name: "<gradient:#a29bfe:#6c5ce7><bold>Alchemist</bold></gradient>"
+    raw: "<#a29bfe>[Alchemist]</#a29bfe>"
+    visible: "<#a29bfe>[Alchemist]</#a29bfe>"
+    description: "Speed while this title is active."
+    icon: BREWING_STAND
+    menu-icons:
+      not-owned:
+        material: BARRIER
+        glow: false
+      owned-inactive:
+        material: BREWING_STAND
+        glow: false
+      owned-active:
+        material: BREWING_STAND
+        glow: true
+    enabled: true
+    purchase-options:
+      permanent:
+        enabled: false
+        cost: 0
+      temporary:
+        30d: 250
+    effects:
+      - template: speed_alchemist
+
+  miner:
+    display-name: "<gradient:#00d2d3:#54a0ff><bold>Miner</bold></gradient>"
+    raw: "<#00d2d3>[Miner]</#00d2d3>"
+    visible: "<#00d2d3>[Miner]</#00d2d3>"
+    description: "3x3 mining while this title is active."
+    icon: DIAMOND_PICKAXE
+    menu-icons:
+      not-owned:
+        material: BARRIER
+        glow: false
+      owned-inactive:
+        material: DIAMOND_PICKAXE
+        glow: false
+      owned-active:
+        material: DIAMOND_PICKAXE
+        glow: true
+    enabled: true
+    purchase-options:
+      permanent:
+        enabled: true
+        cost: 600
+      temporary: {}
+    effects:
+      - template: miner_core
+
+  guardian:
+    display-name: "<gradient:#00f5d4:#00bbf9><bold>Guardian</bold></gradient>"
+    raw: "<#00bbf9>[Guardian]</#00bbf9>"
+    visible: "<#00bbf9>[Guardian]</#00bbf9>"
+    description: "Grants permissions while this title is active."
+    icon: SHIELD
+    menu-icons:
+      not-owned:
+        material: BARRIER
+        glow: false
+      owned-inactive:
+        material: SHIELD
+        glow: false
+      owned-active:
+        material: SHIELD
+        glow: true
+    enabled: true
+    purchase-options:
+      permanent:
+        enabled: true
+        cost: 700
+      temporary: {}
+    effects:
+      - template: guardian_permissions
+
+  herald:
+    display-name: "<gradient:#ffd166:#f78c6b><bold>Herald</bold></gradient>"
+    raw: "<#f78c6b>[Herald]</#f78c6b>"
+    visible: "<#f78c6b>[Herald]</#f78c6b>"
+    description: "Runs commands on activation and deactivation."
+    icon: BELL
+    menu-icons:
+      not-owned:
+        material: BARRIER
+        glow: false
+      owned-inactive:
+        material: BELL
+        glow: false
+      owned-active:
+        material: BELL
+        glow: true
+    enabled: true
+    purchase-options:
+      permanent:
+        enabled: false
+        cost: 0
+      temporary:
+        7d: 120
+    effects:
+      - type: command
+        on-activate:
+          - "console:say {player} activated title {title_id}"
+        on-deactivate:
+          - "console:say {player} deactivated title {title_id}"

@@ -1,0 +1,20 @@
+# Storage settings
+storage:
+  # Database type: SQLITE or MYSQL
+  type: "SQLITE"
+
+  sqlite:
+    # SQLite file name inside plugins/ExtractTitles
+    file: "extracttitles.db"
+
+  mysql:
+    # MySQL host
+    host: "127.0.0.1"
+    # MySQL port
+    port: 3306
+    # Database name
+    database: "extracttitles"
+    # Database username
+    username: "root"
+    # Database password
+    password: "password"

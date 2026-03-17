@@ -1,0 +1,4 @@
+# Main plugin settings
+purchase:
+  # Global purchase currency provider: PLAYERPOINTS | VAULT | NONE
+  currency-provider: "PLAYERPOINTS"
